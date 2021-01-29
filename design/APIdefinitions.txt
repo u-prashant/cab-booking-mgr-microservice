@@ -1,0 +1,76 @@
+APIs
+
+-------------------Book cab from A to B API-------------------------------------
+RequestType: POST 
+Path:        /api/v1/users/{id}/book
+Body:
+{
+   "source": {"latitude": 101, "longitude": 102},
+   "destination": {"latitude": 101, "longitute": 102}
+}
+
+Response
+201 - for success bookings
+500 - for failed bookings
+---------------------------------------------------------------------------------
+
+
+--------------------Get all bookings API---------------------------------------------
+RequestType: GET 
+Path:        /api/v1/users/{id}/bookings
+
+Response:
+[
+  {
+    "BookingId": 1,
+    "BookingDate": "10/01/20 06:45",
+    "Source": {
+      "latitute": 101,
+      "longitude": 101
+    },
+    "Destination": {
+      "latitude": 202,
+      "longitude": 202
+    },
+    "Driver": {
+      "id": 1,
+      "name": "Prashant"
+    },
+    "Cab": {
+      "id": 1,
+      "license_plate": "HR 26 AJ 2020"
+    }
+  },
+  {
+    
+  }
+]
+----------------------------------------------------------------------------------
+
+
+
+--------------------------Get all cabs nearby API---------------------------------
+Request Type: GET
+Path:         /api/v1/cabs?latitude=<>&longitude=<>&availability=<>
+
+Response:
+[
+  {
+    "Cab": {
+      "id": 1,
+      "license_plate": "HR 26 AJ 2020",
+      "location": {
+        "latitute": 101,
+        "longitude": 101
+      }
+      "Driver": {
+        "id": 1,
+        "name": "Prashant",
+      }
+    }
+  },
+  {
+    
+  }
+]
+----------------------------------------------------------------------------------
