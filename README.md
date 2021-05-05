@@ -1,4 +1,4 @@
-Golang Training Program (3 Days) | BidRoom
+Golang Training Program 
 
 1. REST APIs for the following
 - A user should be able to request a booking cab from pickup location A to B.
